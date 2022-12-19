@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>會員管理後台</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+
+<body>
+
+    <!-- <object style="width: 101.2%;
+    height: 102.4%;
+    float: none;
+    clear: both;
+    margin: -10px;"
+        data="https://www.youtube.com/embed/ziKZRHxQH7I">
+    </object> -->
+    <div class="container">
+        <video id="video" width="100%" height="100%" controls autoplay>
+            <source src="./Hellsing_GodFather.mp4" type="video/mp4" />
+        </video>
+        <img style="  display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;" src="https://miro.medium.com/max/828/1*GmsSQSNRAmdd8qga5Y_8Og.webp" width="600" heigh="400"
+            alt="一張圖片">
+        <div id="article" style="  display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;">
+            <div>你能活下來ㄇ？</div><br>
+            <div>你幾歲？</div><br>
+            <select id="sel_1" size="1">
+                <option value=" 0">選項1</option>
+                <option value="1">選項2</option>
+                <option value="2">選項3</option>
+                <option value="3">選項4</option>
+                <option value="4">選項5</option>
+                <option value="5">選項6</option>
+                <option value="6">選項7</option>
+                <option value="7">選項8</option>
+                <option value="8">選項9</option>
+                <option value="9">選項10</option>
+            </select>
+            <div>你出門旅遊旅費抓多少</div><br>
+            <select id="sel_2" size="1">
+                <option value=" 0">選項1</option>
+                <option value="1">選項2</option>
+                <option value="2">選項3</option>
+                <option value="3">選項4</option>
+                <option value="4">選項5</option>
+                <option value="5">選項6</option>
+                <option value="6">選項7</option>
+                <option value="7">選項8</option>
+                <option value="8">選項9</option>
+                <option value="9">選項10</option>
+            </select>
+            <div>你是男是女</div><br>
+            <select id="sel_3" size="1">
+                <option value=" 0">選項1</option>
+                <option value="1">選項2</option>
+                <option value="2">選項3</option>
+                <option value="3">選項4</option>
+                <option value="4">選項5</option>
+                <option value="5">選項6</option>
+                <option value="6">選項7</option>
+                <option value="7">選項8</option>
+                <option value="8">選項9</option>
+                <option value="9">選項10</option>
+            </select>
+            <button id="parseButton">分析</button>
+        </div>
+    </div>
+
+
+    <script>
+        const player = document.getElementById('video');
+        const parseButton_El = document.getElementById("parseButton");
+        const article_El = document.getElementById("article");
+        /*Listener setting*/
+        parseButton_El.addEventListener('click', () => {
+            var newDiv = document.createElement("div");
+            newDiv.innerText = '你已經死了';
+            article_El.appendChild(document.createElement("br"));
+            article_El.appendChild(document.createElement("br"));
+            article_El.appendChild(newDiv);
+        })
+        player.onended = () => {
+            player.remove();
+        };
+
+
+    </script>
+</body>
+
+</html>
