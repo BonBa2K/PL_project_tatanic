@@ -1,7 +1,6 @@
 <html>
 
 <head>
-    <title>會員管理後台</title>
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
@@ -17,13 +16,10 @@
         data="https://www.youtube.com/embed/ziKZRHxQH7I">
     </object> -->
     <div class="container">
-        <video id="video" width="100%" height="100%" controls autoplay>
-            <source src="./Hellsing_GodFather.mp4" type="video/mp4" />
-        </video>
-        <img style="  display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;" src="https://miro.medium.com/max/828/1*GmsSQSNRAmdd8qga5Y_8Og.webp" width="600" heigh="400"
+        <div class="video">
+            <div id="video"></div>
+        </div>
+        <img id="Taitanic_icon" style="transform: translate(-100%, 0px);" src="Taitanic_icon.png" height="50%"
             alt="一張圖片">
         <div id="article" style="  display: block;
         margin-left: auto;
@@ -72,10 +68,11 @@
             <button id="parseButton">分析</button>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="test.js"></script>
 
 
     <script>
-        const player = document.getElementById('video');
         const parseButton_El = document.getElementById("parseButton");
         const article_El = document.getElementById("article");
         /*Listener setting*/
@@ -86,11 +83,6 @@
             article_El.appendChild(document.createElement("br"));
             article_El.appendChild(newDiv);
         })
-        player.onended = () => {
-            player.remove();
-        };
-
-
     </script>
 </body>
 

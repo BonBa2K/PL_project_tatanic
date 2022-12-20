@@ -1,0 +1,19 @@
+#wrapper{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.content{
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000;
+    position: relative;
+    z-index: 100;
+}
+
+#demo{
+    position: absolute;
+    z-index: -100;
+}

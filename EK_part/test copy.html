@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="./style copy.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+
+<body>
+    <div class="box">
+        <img style="  display: absolute;
+        width: 50%;" id="video" src="EK.jpg">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+        gsap.to(".box", { x: window.innerWidth * 0.5 });
+        gsap.to(".box", { y: window.innerHeight * 0.5 });
+
+
+    </script>
+</body>
+
+</html>
