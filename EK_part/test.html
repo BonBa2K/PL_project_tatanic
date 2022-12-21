@@ -16,6 +16,7 @@
         data="https://www.youtube.com/embed/ziKZRHxQH7I">
     </object> -->
     <div class="container">
+        <img id="title" src="../Dragon_part/T_title.jpg" alt="鐵達尼logo">
         <div class="video">
             <div id="video"></div>
         </div>
@@ -67,6 +68,8 @@
                 <option value="2">二等艙(約1900美元, 6萬台幣)</option>
                 <option value="3">三等艙(約900美元, 3萬台幣)</option>
             </select>
+            <img class="sel_6_t" src="../EK_part/taitanic.jpg">
+            <div>你喜歡你的房間在哪塊甲板</div><br>
             <select id="sel_6" size="1">
                 <option value="1">A</option>
                 <option value="0">B</option>
@@ -132,7 +135,8 @@
             article_El.appendChild(newDiv_1);
 
             var newDiv_2 = document.createElement("img");
-            newDiv_2.src = "../Anderson_part/Anderson_1.JPG";
+            newDiv_2.src = "../Anderson_part/Anderson_" + String(Math.floor(Math.random() * 10) + 1) + ".JPG";
+
             article_El.appendChild(document.createElement("br"));
             article_El.appendChild(document.createElement("br"));
             article_El.appendChild(newDiv_2);

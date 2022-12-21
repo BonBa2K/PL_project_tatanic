@@ -30,7 +30,7 @@ video {
 
 #dragon_pic_6 {
     position: absolute;
-    top: 860px;
+    top: 1560px;
     left: 5%;
     height: 178px;
     opacity: 0;
@@ -39,7 +39,7 @@ video {
 
 #dragon_pic_7 {
     position: absolute;
-    top: 860px;
+    top: 1560px;
     left: 20%;
     height: 178px;
     opacity: 0;
@@ -48,7 +48,7 @@ video {
 
 #dragon_pic_8 {
     position: absolute;
-    top: 860px;
+    top: 1560px;
     left: 35%;
     height: 178px;
     opacity: 0;
@@ -57,7 +57,7 @@ video {
 
 #dragon_pic_9 {
     position: absolute;
-    top: 860px;
+    top: 1560px;
     left: 50%;
     height: 178px;
     opacity: 0;
@@ -66,7 +66,7 @@ video {
 
 #dragon_pic_10 {
     position: absolute;
-    top: 860px;
+    top: 1560px;
     left: 65%;
     height: 178px;
     opacity: 0;
@@ -75,7 +75,7 @@ video {
 
 #dragon_pic_11 {
     position: absolute;
-    top: 860px;
+    top: 1560px;
     left: 80%;
     height: 178px;
     opacity: 0;
@@ -84,7 +84,7 @@ video {
 
 #dragon_pic_12 {
     position: absolute;
-    top: 1050px;
+    top: 1750px;
     left: 12%;
     height: 178px;
     opacity: 0;
@@ -93,7 +93,7 @@ video {
 
 #dragon_pic_13 {
     position: absolute;
-    top: 1050px;
+    top: 1750px;
     left: 27%;
     height: 178px;
     opacity: 0;
@@ -102,7 +102,7 @@ video {
 
 #dragon_pic_14 {
     position: absolute;
-    top: 1050px;
+    top: 1750px;
     left: 42%;
     height: 178px;
     opacity: 0;
@@ -111,7 +111,7 @@ video {
 
 #dragon_pic_15 {
     position: absolute;
-    top: 1050px;
+    top: 1750px;
     left: 57%;
     height: 178px;
     opacity: 0;
@@ -120,7 +120,7 @@ video {
 
 #dragon_pic_16 {
     position: absolute;
-    top: 1050px;
+    top: 1750px;
     left: 72%;
     height: 178px;
     opacity: 0;
@@ -133,9 +133,21 @@ a {
     align-items: center;
 }
 
+#title {
+    height: 100%;
+    width: 100%;
+}
+
+.sel_6_t {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 178px;
+}
+
 #dragon_pic_17 {
     position: absolute;
-    top: 1240px;
+    top: 1940px;
     left: 20%;
     height: 178px;
     opacity: 0;
@@ -144,7 +156,7 @@ a {
 
 #down_arrow {
     position: absolute;
-    top: 1300px;
+    top: 2000px;
     left: 42.5%;
     height: 178px;
     opacity: 0;
@@ -153,7 +165,7 @@ a {
 
 #dragon_pic_18 {
     position: absolute;
-    top: 1240px;
+    top: 1940px;
     left: 65%;
     height: 178px;
     opacity: 0;
