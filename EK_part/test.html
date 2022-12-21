@@ -20,23 +20,24 @@
         <div class="video">
             <div id="video"></div>
         </div>
-        <img class="dragon_pic" id="dragon_pic_6" src="../Dragon_part/Pic_6.JPG">
-        <img class="dragon_pic" id="dragon_pic_7" src="../Dragon_part/Pic_7.JPG">
-        <img class="dragon_pic" id="dragon_pic_8" src="../Dragon_part/Pic_8.JPG">
-        <img class="dragon_pic" id="dragon_pic_9" src="../Dragon_part/Pic_9.JPG">
-        <img class="dragon_pic" id="dragon_pic_10" src="../Dragon_part/Pic_10.JPG">
-        <img class="dragon_pic" id="dragon_pic_11" src="../Dragon_part/Pic_11.JPG">
-        <img class="dragon_pic" id="dragon_pic_12" src="../Dragon_part/Pic_12.JPG">
-        <img class="dragon_pic" id="dragon_pic_13" src="../Dragon_part/Pic_13.JPG">
-        <img class="dragon_pic" id="dragon_pic_14" src="../Dragon_part/Pic_14.JPG">
-        <img class="dragon_pic" id="dragon_pic_15" src="../Dragon_part/Pic_15.JPG">
-        <img class="dragon_pic" id="dragon_pic_16" src="../Dragon_part/Pic_16.JPG">
-        <img class="dragon_pic" id="dragon_pic_17" src="../Dragon_part/Pic_17.JPG">
-        <img class="down_arrow" id="down_arrow" src="../Dragon_part/down_arrow.png">
-        <img class="dragon_pic" id="dragon_pic_18" src="../Dragon_part/Pic_18.JPG">
-
-        <img id="Taitanic_icon" src="Taitanic_icon.png" alt="鐵達尼logo">
+        <div class="dragon_pic_contain">
+            <img class="dragon_pic" id="dragon_pic_6" src="../Dragon_part/Pic_6.JPG">
+            <img class="dragon_pic" id="dragon_pic_7" src="../Dragon_part/Pic_7.JPG">
+            <img class="dragon_pic" id="dragon_pic_8" src="../Dragon_part/Pic_8.JPG">
+            <img class="dragon_pic" id="dragon_pic_9" src="../Dragon_part/Pic_9.JPG">
+            <img class="dragon_pic" id="dragon_pic_10" src="../Dragon_part/Pic_10.JPG">
+            <img class="dragon_pic" id="dragon_pic_11" src="../Dragon_part/Pic_11.JPG">
+            <img class="dragon_pic" id="dragon_pic_12" src="../Dragon_part/Pic_12.JPG">
+            <img class="dragon_pic" id="dragon_pic_13" src="../Dragon_part/Pic_13.JPG">
+            <img class="dragon_pic" id="dragon_pic_14" src="../Dragon_part/Pic_14.JPG">
+            <img class="dragon_pic" id="dragon_pic_15" src="../Dragon_part/Pic_15.JPG">
+            <img class="dragon_pic" id="dragon_pic_16" src="../Dragon_part/Pic_16.JPG">
+            <img class="dragon_pic" id="dragon_pic_17" src="../Dragon_part/Pic_17.JPG">
+            <img class="dragon_pic" id="dragon_pic_18" src="../Dragon_part/Pic_18.JPG">
+        </div>
         <div id="article">
+            <img id="Taitanic_icon" src="Taitanic_icon.png" alt="鐵達尼logo">
+
             <div>你能活下來ㄇ？</div><br>
             <div>你是男性/女性？</div><br>
             <select id="sel_1" size="1">
@@ -80,6 +81,8 @@
                 <option value="1">G</option>
             </select>
             <button id="parseButton">分析</button>
+            <div id="answer"> </div>
+
         </div>
         <a href="https://youtu.be/qDcrC24zxiA">
             文章分析說明
@@ -90,8 +93,8 @@
         </a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="test.js"></script>
     <script src="csvparser.js"></script>
+    <script src="test.js"></script>
     <script>
         var e = [];
         e[0] = document.getElementById("sel_1");
@@ -104,12 +107,21 @@
         var answer = parse_anderson(String(value));
 
         const parseButton_El = document.getElementById("parseButton");
-        const article_El = document.getElementById("article");
-        /*Listener setting*/
+        const answer_El = document.getElementById("answer");
         parseButton_El.addEventListener('click', () => {
-            // old = document.getElementsByClassName("Output");
-            // // old.forEach(element => element.remove());
-            // console.log("old[0] = ",old[0]);
+            /*清理舊資料*/
+            if (answer_El.querySelector('*') !== null) {
+                var childs = answer_El.querySelectorAll('*')
+                childs.forEach(element => {
+                    console.log(element);
+                    element.remove();
+                });
+                console.log('✅ element has child ==',);
+            }
+            else {
+                console.log('⛔️ element does NOT have child');
+            }
+            /*創建新資料*/
             var newDiv_1 = document.createElement("img");
             value = e[0].value + e[1].value + e[2].value + e[3].value + e[4].value + e[5].value;
             answer = parse_anderson(String(value));
@@ -119,27 +131,22 @@
             console.log(parse_anderson(String(value)));
             switch (answer) {
                 case 0:
-                    newDiv_1.src = "../Anderson_part/Anderson_fail.JPG";
+                    newDiv_1.src = "../Anderson_part/Anderson_fail.png";
                     break;
                 case 1:
-                    newDiv_1.src = "../Anderson_part/Anderson_success.JPG";
+                    newDiv_1.src = "../Anderson_part/Anderson_success.png";
                     break;
                 default:
                     console.log(`Sorry, we are out of ${expr}.`);
             }
             // newDiv_1.className = "Output";
             // newDiv_2.className = "Output";
-
-            article_El.appendChild(document.createElement("br"));
-            article_El.appendChild(document.createElement("br"));
-            article_El.appendChild(newDiv_1);
-
             var newDiv_2 = document.createElement("img");
-            newDiv_2.src = "../Anderson_part/Anderson_" + String(Math.floor(Math.random() * 10) + 1) + ".JPG";
+            newDiv_2.src = "../Anderson_part/Anderson_" + String(Math.floor(Math.random() * 10) + 1) + ".png";
 
-            article_El.appendChild(document.createElement("br"));
-            article_El.appendChild(document.createElement("br"));
-            article_El.appendChild(newDiv_2);
+            answer_El.appendChild(newDiv_1);
+            answer_El.appendChild(newDiv_2);
+
         })
     </script>
 </body>

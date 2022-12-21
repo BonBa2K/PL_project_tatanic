@@ -46,21 +46,12 @@ function onPlayerStateChange(event) {
         tl.to(".video ", {
             duration: 2.5, x: -window.innerWidth
         })
-        tl.to(".dragon_pic", {
-            duration: 2.5, y: -800, opacity: 1
-        })
-        tl.to(".down_arrow", {
-            duration: 2.5, y: -800, opacity: 1,
-            ease: "elastic.out(1, 0.3)"
+        tl.to(".dragon_pic,#article", {
+            duration: 2.5, y: -window.innerHeight, opacity: 1
         })
         // tl.to(".container,.dragon_pic", {
         //     duration: 2.5, y: -window.innerHeight
         // })
-        tl.to("#Taitanic_icon", {
-            duration: 3,
-            x: window.innerWidth * 0.5 - document.getElementById('Taitanic_icon').width * 0.5,
-            ease: "elastic.out(1, 0.3)"
-        })
         console.log("iframe_in ==", iframe_in);
     }
 }
