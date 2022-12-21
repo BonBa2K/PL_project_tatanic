@@ -131,10 +131,10 @@
             console.log(parse_anderson(String(value)));
             switch (answer) {
                 case 0:
-                    newDiv_1.src = "../Anderson_part/Anderson_fail.png";
+                    newDiv_1.src = "../Anderson_part/Anderson_fail.JPG";
                     break;
                 case 1:
-                    newDiv_1.src = "../Anderson_part/Anderson_success.png";
+                    newDiv_1.src = "../Anderson_part/Anderson_success.JPG";
                     break;
                 default:
                     console.log(`Sorry, we are out of ${expr}.`);
@@ -142,7 +142,7 @@
             // newDiv_1.className = "Output";
             // newDiv_2.className = "Output";
             var newDiv_2 = document.createElement("img");
-            newDiv_2.src = "../Anderson_part/Anderson_" + String(Math.floor(Math.random() * 10) + 1) + ".png";
+            newDiv_2.src = "../Anderson_part/Anderson_" + String(Math.floor(Math.random() * 10) + 1) + ".JPG";
 
             answer_El.appendChild(newDiv_1);
             answer_El.appendChild(newDiv_2);
