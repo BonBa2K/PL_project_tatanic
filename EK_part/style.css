@@ -6,6 +6,11 @@ body {
 
 #title {
     height: 100%;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
 
 video {
@@ -36,12 +41,12 @@ video {
 
     padding: 10px;
     margin: 10px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
+
 #answer {
 
     padding: 10px;
@@ -52,9 +57,10 @@ video {
     align-items: center;
     flex-wrap: nowrap;
 }
+
 .dragon_pic {
     width: 30%;
-    opacity: 1;
+    opacity: 0;
     z-index: 1;
 }
 
@@ -63,8 +69,6 @@ a {
     justify-content: center;
     align-items: center;
 }
-
-
 
 .sel_6_t {
     display: flex;
@@ -80,6 +84,6 @@ a {
     top: 2000px;
     left: 42.5%;
     height: 178px;
-    opacity: 1;
+    opacity: 0;
     z-index: 1;
 }
