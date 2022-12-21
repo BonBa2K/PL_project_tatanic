@@ -2,20 +2,160 @@ html,
 body {
     height: 100%;
     margin: 0 auto;
-    
-}
-/* 
-.container {
-    margin-top: 1%;
-} */
-video{
-    background-color: black;
-}
-.input_field {
-    text-align: center;
-    margin-top: 10px;
 }
 
-input {
-    width: 20%;
+video {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+
+#Taitanic_icon {
+    margin-top: 10px;
+    transform: translate(-100%, 0px);
+    height: 50%;
+}
+
+#article {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+#dragon_pic_6 {
+    position: absolute;
+    top: 860px;
+    left: 5%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_7 {
+    position: absolute;
+    top: 860px;
+    left: 20%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_8 {
+    position: absolute;
+    top: 860px;
+    left: 35%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_9 {
+    position: absolute;
+    top: 860px;
+    left: 50%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_10 {
+    position: absolute;
+    top: 860px;
+    left: 65%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_11 {
+    position: absolute;
+    top: 860px;
+    left: 80%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_12 {
+    position: absolute;
+    top: 1050px;
+    left: 12%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_13 {
+    position: absolute;
+    top: 1050px;
+    left: 27%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_14 {
+    position: absolute;
+    top: 1050px;
+    left: 42%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_15 {
+    position: absolute;
+    top: 1050px;
+    left: 57%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_16 {
+    position: absolute;
+    top: 1050px;
+    left: 72%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dragon_pic_17 {
+    position: absolute;
+    top: 1240px;
+    left: 20%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#down_arrow {
+    position: absolute;
+    top: 1300px;
+    left: 42.5%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
+}
+
+#dragon_pic_18 {
+    position: absolute;
+    top: 1240px;
+    left: 65%;
+    height: 178px;
+    opacity: 0;
+    z-index: 1;
 }

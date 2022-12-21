@@ -44,19 +44,23 @@ function onPlayerStateChange(event) {
                 console.log("remove success");
             },
         });
-        gsap.to("#article", {
-            duration: 2.5, y: window.innerHeight,
+        tl.to(".video ", {
+            duration: 2.5, x: -window.innerWidth
         })
-        tl.to(".container", {
-            duration: 2.5, y: -window.innerHeight
+        tl.to(".dragon_pic", {
+            duration: 2.5, y: -800, opacity: 1
         })
+        tl.to(".down_arrow", {
+            duration: 2.5, y: -800, opacity: 1,
+            ease: "elastic.out(1, 0.3)"
+        })
+        // tl.to(".container,.dragon_pic", {
+        //     duration: 2.5, y: -window.innerHeight
+        // })
         tl.to("#Taitanic_icon", {
-            duration: 3, 
+            duration: 3,
             x: window.innerWidth * 0.5 - document.getElementById('Taitanic_icon').width * 0.5,
-            ease:"elastic.out(1, 0.3)"
-        })
-        tl.to("#article", {
-            duration: 2.5, y: 0
+            ease: "elastic.out(1, 0.3)"
         })
         console.log("iframe_in ==", iframe_in);
     }
@@ -64,3 +68,32 @@ function onPlayerStateChange(event) {
 function stopVideo() {
     player.stopVideo();
 }
+// let select = document.querySelector("#sel_1");
+// select.addEventListener("change", Problem_1);
+// var p=["0",];
+
+// function Problem_1() {
+//     const switchValue = select.options[select.selectedIndex].value;
+//     switch (switchValue) {
+//         case "1":
+//             option_01();
+//             break;
+//         case "2":
+//             option_02();
+//             break;
+//         case "3":
+//             option_03();
+//             break;
+//         case "4":
+//             option_04();
+//             break;
+//         case "5":
+//             option_05();
+//             break;
+//         case "6":
+//             option_06();
+//             break;
+//         default:
+//             return;
+//     }
+// }

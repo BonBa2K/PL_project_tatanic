@@ -19,69 +19,123 @@
         <div class="video">
             <div id="video"></div>
         </div>
-        <img id="Taitanic_icon" style="transform: translate(-100%, 0px);" src="Taitanic_icon.png" height="50%"
-            alt="一張圖片">
-        <div id="article" style="  display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;">
+        <img class="dragon_pic" id="dragon_pic_6" src="../Dragon_part/Pic_6.JPG">
+        <img class="dragon_pic" id="dragon_pic_7" src="../Dragon_part/Pic_7.JPG">
+        <img class="dragon_pic" id="dragon_pic_8" src="../Dragon_part/Pic_8.JPG">
+        <img class="dragon_pic" id="dragon_pic_9" src="../Dragon_part/Pic_9.JPG">
+        <img class="dragon_pic" id="dragon_pic_10" src="../Dragon_part/Pic_10.JPG">
+        <img class="dragon_pic" id="dragon_pic_11" src="../Dragon_part/Pic_11.JPG">
+        <img class="dragon_pic" id="dragon_pic_12" src="../Dragon_part/Pic_12.JPG">
+        <img class="dragon_pic" id="dragon_pic_13" src="../Dragon_part/Pic_13.JPG">
+        <img class="dragon_pic" id="dragon_pic_14" src="../Dragon_part/Pic_14.JPG">
+        <img class="dragon_pic" id="dragon_pic_15" src="../Dragon_part/Pic_15.JPG">
+        <img class="dragon_pic" id="dragon_pic_16" src="../Dragon_part/Pic_16.JPG">
+        <img class="dragon_pic" id="dragon_pic_17" src="../Dragon_part/Pic_17.JPG">
+        <img class="down_arrow" id="down_arrow" src="../Dragon_part/down_arrow.png">
+        <img class="dragon_pic" id="dragon_pic_18" src="../Dragon_part/Pic_18.JPG">
+
+        <img id="Taitanic_icon" src="Taitanic_icon.png" alt="鐵達尼logo">
+        <div id="article">
             <div>你能活下來ㄇ？</div><br>
-            <div>你幾歲？</div><br>
+            <div>你是男性/女性？</div><br>
             <select id="sel_1" size="1">
-                <option value=" 0">選項1</option>
-                <option value="1">選項2</option>
-                <option value="2">選項3</option>
-                <option value="3">選項4</option>
-                <option value="4">選項5</option>
-                <option value="5">選項6</option>
-                <option value="6">選項7</option>
-                <option value="7">選項8</option>
-                <option value="8">選項9</option>
-                <option value="9">選項10</option>
+                <option value="0">男性</option>
+                <option value="1">女性</option>
             </select>
-            <div>你出門旅遊旅費抓多少</div><br>
+            <div>你年滿16歲了嗎？</div><br>
             <select id="sel_2" size="1">
-                <option value=" 0">選項1</option>
-                <option value="1">選項2</option>
-                <option value="2">選項3</option>
-                <option value="3">選項4</option>
-                <option value="4">選項5</option>
-                <option value="5">選項6</option>
-                <option value="6">選項7</option>
-                <option value="7">選項8</option>
-                <option value="8">選項9</option>
-                <option value="9">選項10</option>
+                <option value="0">否</option>
+                <option value="1">是</option>
             </select>
-            <div>你是男是女</div><br>
+            <div>你和幾個家人一起旅行？</div><br>
             <select id="sel_3" size="1">
-                <option value=" 0">選項1</option>
-                <option value="1">選項2</option>
-                <option value="2">選項3</option>
-                <option value="3">選項4</option>
-                <option value="4">選項5</option>
-                <option value="5">選項6</option>
-                <option value="6">選項7</option>
-                <option value="7">選項8</option>
-                <option value="8">選項9</option>
-                <option value="9">選項10</option>
+                <option value="0">0位</option>
+                <option value="1">1位</option>
+                <option value="2">2位</option>
+                <option value="3">3位</option>
+                <option value="4">4位</option>
+            </select>
+            <div>你從哪裡上船的</div><br>
+            <select id="sel_4" size="1">
+                <option value="C">瑟堡</option>
+                <option value="Q">皇后鎮</option>
+                <option value="S">南安普頓</option>
+            </select>
+            <div>你打算買哪個艙等的票</div><br>
+            <select id="sel_5" size="1">
+                <option value="1">頭等艙(約57,000美元, 1,75萬台幣)</option>
+                <option value="2">二等艙(約1900美元, 6萬台幣)</option>
+                <option value="3">三等艙(約900美元, 3萬台幣)</option>
+            </select>
+            <select id="sel_6" size="1">
+                <option value="1">A</option>
+                <option value="0">B</option>
+                <option value="0">C</option>
+                <option value="0">D</option>
+                <option value="0">E</option>
+                <option value="1">F</option>
+                <option value="1">G</option>
             </select>
             <button id="parseButton">分析</button>
         </div>
+        <a href="https://youtu.be/qDcrC24zxiA">
+            文章分析說明
+        </a><br>
+        <a
+            href="https://docs.google.com/presentation/d/1S8THtpWA9Bo1PZPfW24TUBPXQrfBJjm4/edit?usp=share_link&ouid=101476300969810973581&rtpof=true&sd=true">
+            數據分析說明
+        </a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="test.js"></script>
-
-
+    <script src="csvparser.js"></script>
     <script>
+        var e = [];
+        e[0] = document.getElementById("sel_1");
+        e[1] = document.getElementById("sel_2");
+        e[2] = document.getElementById("sel_3");
+        e[3] = document.getElementById("sel_4");
+        e[4] = document.getElementById("sel_5");
+        e[5] = document.getElementById("sel_6");
+        var value = e[0].value + e[1].value + e[2].value + e[3].value + e[4].value + e[5].value;
+        var answer = parse_anderson(String(value));
+
         const parseButton_El = document.getElementById("parseButton");
         const article_El = document.getElementById("article");
         /*Listener setting*/
         parseButton_El.addEventListener('click', () => {
-            var newDiv = document.createElement("div");
-            newDiv.innerText = '你已經死了';
+            // old = document.getElementsByClassName("Output");
+            // // old.forEach(element => element.remove());
+            // console.log("old[0] = ",old[0]);
+            var newDiv_1 = document.createElement("img");
+            value = e[0].value + e[1].value + e[2].value + e[3].value + e[4].value + e[5].value;
+            answer = parse_anderson(String(value));
+            console.log('value = ')
+            console.log('value = ', value)
+            console.log('answer');
+            console.log(parse_anderson(String(value)));
+            switch (answer) {
+                case 0:
+                    newDiv_1.src = "../Anderson_part/Anderson_fail.JPG";
+                    break;
+                case 1:
+                    newDiv_1.src = "../Anderson_part/Anderson_success.JPG";
+                    break;
+                default:
+                    console.log(`Sorry, we are out of ${expr}.`);
+            }
+            // newDiv_1.className = "Output";
+            // newDiv_2.className = "Output";
+
             article_El.appendChild(document.createElement("br"));
             article_El.appendChild(document.createElement("br"));
-            article_El.appendChild(newDiv);
+            article_El.appendChild(newDiv_1);
+
+            var newDiv_2 = document.createElement("img");
+            newDiv_2.src = "../Anderson_part/Anderson_1.JPG";
+            article_El.appendChild(document.createElement("br"));
+            article_El.appendChild(document.createElement("br"));
+            article_El.appendChild(newDiv_2);
         })
     </script>
 </body>
